@@ -1,0 +1,21 @@
+- include: homebrew:yml
+  
+# - name: Add SSH key
+#   authorized_key:
+#     key: "https://github.com/{{ user.name }}.keys"
+#     user: "{{ user.name }}"
+
+# Ruby setup
+- name: Install Ruby
+  command: rbenv install --skip-existing --keep {{ item }}
+  args:
+    creates: "/Users/{{ user.name }}/.rbenv/versions/{{ item }}"
+  with_items: rbenv.versions
+- name: Install Bundler
+  gem:
+    name: bundler
+    state: latest
+    executable: "rbenv exec gem"
+  environment:
+    RBENV_VERSION: "{{ item }}"
+  with_items: rbenv.versions

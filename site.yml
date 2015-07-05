@@ -1,0 +1,11 @@
+---
+-
+  hosts: osx
+  vars:
+    user:
+      name: stanaka
+    rbenv:
+      versions: 2.2.2
+  gather_facts: no
+  tasks:
+    - include: tasks.yml

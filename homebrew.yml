@@ -1,0 +1,62 @@
+- name: Update homebrew
+  homebrew:
+    update_homebrew: yes
+  when: update_homebrew | default(False)
+
+- name: Tap Homebrew Cask
+  homebrew_tap: tap=caskroom/cask
+- name: Install brew-cask
+  homebrew: name=brew-cask
+- homebrew_cask: name=alfred
+#    - homebrew_cask: name=google-chrome
+#    - homebrew_cask: name=google-drive
+#    - homebrew_cask: name=firefox
+#    - homebrew_cask: name=dropbox
+#    - homebrew_cask: name=iterm2
+#    - homebrew_cask: name=skitch
+- homebrew_cask: name=vlc
+- homebrew_cask: name=istat-menus
+- command: brew cask cleanup
+
+- homebrew: name=ack
+- homebrew: name=boost
+- homebrew: name=emacs install_options=with-cocoa
+- homebrew: name=encfs
+- homebrew: name=git
+- homebrew: name=go
+- homebrew: name=heroku-toolbelt
+- homebrew: name=hub
+- homebrew: name=keychain
+- homebrew: name=mongodb
+- homebrew: name=nkf
+- homebrew: name=node
+- homebrew: name=python
+- homebrew: name=rsync
+- homebrew: name=rbenv
+- homebrew: name=ruby-build
+- homebrew: name=sqlite
+- homebrew: name=sshfs
+- homebrew: name=the_silver_searcher
+- homebrew: name=tig
+- homebrew: name=tmux
+- homebrew: name=wget
+- homebrew: name=zsh
+- homebrew: name=zsh-completions
+# - homebrew: name=lv
+# - homebrew: name=dsocks state=present
+# - homebrew: name=imagemagick
+
+# Followings are installed via App Store
+#  find /Applications -path '*Contents/_MASReceipt/receipt' -maxdepth 4 -print |\sed 's#.app/Contents/_MASReceipt/receipt#.app#g; s#/Applications/##'
+
+# 2Do.app
+# Alternote.app
+# Day One.app
+# GarageBand.app
+# iPhoto.app
+# Keynote.app
+# Skitch.app
+# Slack.app
+# The Unarchiver.app
+# Twitter.app
+# Xcode.app
