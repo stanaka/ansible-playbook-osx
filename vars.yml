@@ -1,0 +1,34 @@
+---
+osx_defaults_finder_values:
+  - { domain: com.apple.finder, key: AppleShowAllFiles, type: boolean, value: false, state: present }
+  - { domain: com.apple.finder, key: _FXShowPosixPathInTitle, type: string, value: true, state: present }
+  - { domain: com.apple.desktopservices, key: DSDontWriteNetworkStores, type: string, value: true, state: present }
+  - { domain: com.apple.dock, key: expose-animation-duration, type: float, value: 0.15, state: present }
+  - { domain: com.apple.dock, key: workspaces-swoosh-animation-off, type: boolean, value: true, state: present }
+  - { domain: com.apple.dock, key: showhidden, type: boolean, value: true, state: present }
+
+osx_defaults_other_values:
+  - { domain: com.apple.dashboard, key: mcx-disabled, type: boolean, value: true, state: present }
+  - { domain: .GlobalPreferences, key: com.apple.trackpad.scaling, type: int, value: true, state: present }
+  - { domain: .GlobalPreferences, key: NSNavPanelExpandedStateForSaveMode, type: boolean, value: true, state: present }
+# Dock - MissonControlのアニメーションスピードを速く
+# defaults write com.apple.dock expose-animation-duration -float 0.15
+# Dock - スペース表示高速化
+# defaults write com.apple.dock workspaces-swoosh-animation-off -bool yes
+# ダッシュボードを無効化
+# defaults write com.apple.dashboard mcx-disabled -bool yes
+## アプリ隠しをDock上で半透明で表現
+# defaults write com.apple.Dock showhidden -bool yes
+
+# マウスの速度を変える
+# defaults write .GlobalPreferences com.apple.trackpad.scaling 5
+
+# ネットワーク接続時の.DS_Store作成を抑制
+# defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+
+# 保存ダイアログを常に展開状態にする
+# defaults write -g NSNavPanelExpandedStateForSaveMode -bool yes
+
+
+osx_defaults_system_ui_server_values:
+  - { domain: com.apple.screencapture, key: disable-shadow, type: boolean, value: true, state: present }

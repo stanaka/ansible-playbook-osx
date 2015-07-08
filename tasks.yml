@@ -1,3 +1,4 @@
+- include: osx_defaults.yml
 - include: homebrew.yml
   
 # - name: Add SSH key
@@ -30,8 +31,9 @@
     - .gitignore
     - .mackup.cfg
     - .tmux.conf
-    - .zsh-history
-    - .zshrc
 
 - name: Setup a symlink for atom conf
   file: src=/Users/{{ user.name }}/Dropbox/lib/atom dest=/Users/{{ user.name }}/.atom state=link
+
+- name: Setup a symlink for zsh conf
+  file: src=/Users/{{ user.name }}/Dropbox/lib/zsh/.zshrc dest=/Users/{{ user.name }}/.zshrc state=link
