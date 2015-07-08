@@ -7,42 +7,64 @@
   homebrew_tap: tap=caskroom/cask
 - name: Install brew-cask
   homebrew: name=brew-cask
+- homebrew_cask: name=adobe-creative-cloud
 - homebrew_cask: name=alfred
-#    - homebrew_cask: name=google-chrome
-#    - homebrew_cask: name=google-drive
-#    - homebrew_cask: name=firefox
-#    - homebrew_cask: name=dropbox
-#    - homebrew_cask: name=iterm2
-#    - homebrew_cask: name=skitch
-- homebrew_cask: name=vlc
+- homebrew_cask: name=appcleaner
+- homebrew_cask: name=atom
+- homebrew_cask: name=bettertouchtool
+- homebrew_cask: name=boot2docker
+- homebrew_cask: name=dash
+- homebrew_cask: name=dropbox
+- homebrew_cask: name=dwihn0r-keepassx
+- homebrew_cask: name=firefox
+- homebrew_cask: name=google-chrome
+- homebrew_cask: name=google-drive
+- homebrew_cask: name=intellij-idea-ce
 - homebrew_cask: name=istat-menus
+- homebrew_cask: name=iterm2
+- homebrew_cask: name=omnidisksweeper
+- homebrew_cask: name=omnigraffle
+- homebrew_cask: name=skitch
+- homebrew_cask: name=skype
+- homebrew_cask: name=slack
+- homebrew_cask: name=steam
+- homebrew_cask: name=the-unarchiver
+- homebrew_cask: name=vlc
+- homebrew_cask: name=zoomus
 - command: brew cask cleanup
+# - homebrew_cask: name=hoster
+
+# - name: Tap Homebrew Aereal Cask
+#   homebrew_tap: tap=aereal/homebrew-aereal_casks
+# - homebrew_cask: name=aquaskk
 
 - homebrew: name=ack
 - homebrew: name=boost
 - homebrew: name=emacs install_options=with-cocoa
-- homebrew: name=encfs
+- homebrew: name=ghq
 - homebrew: name=git
 - homebrew: name=go
 - homebrew: name=heroku-toolbelt
 - homebrew: name=hub
 - homebrew: name=keychain
+- homebrew: name=lv
 - homebrew: name=mongodb
 - homebrew: name=nkf
 - homebrew: name=node
+- homebrew: name=peco
 - homebrew: name=python
-- homebrew: name=rsync
 - homebrew: name=rbenv
 - homebrew: name=ruby-build
 - homebrew: name=sqlite
-- homebrew: name=sshfs
 - homebrew: name=the_silver_searcher
 - homebrew: name=tig
 - homebrew: name=tmux
 - homebrew: name=wget
 - homebrew: name=zsh
 - homebrew: name=zsh-completions
-# - homebrew: name=lv
+# - homebrew: name=encfs
+# - homebrew: name=rsync
+# - homebrew: name=sshfs
 # - homebrew: name=dsocks state=present
 # - homebrew: name=imagemagick
 

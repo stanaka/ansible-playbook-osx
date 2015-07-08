@@ -1,4 +1,4 @@
-- include: homebrew:yml
+- include: homebrew.yml
   
 # - name: Add SSH key
 #   authorized_key:
@@ -19,3 +19,15 @@
   environment:
     RBENV_VERSION: "{{ item }}"
   with_items: rbenv.versions
+
+- name: dotfiles
+  file: src=/Users/{{ user.name }}/Dropbox/lib/dotfiles/{{ item }} dest=/Users/{{ user.name }}/{{ item }} state=link
+  with_items:
+    - .bash_profile
+    - .bashrc
+    - .emacs.d
+    - .gitconfig
+    - .gitignore
+    - .tmux.conf
+    - .zsh-history
+    - .zshrc
