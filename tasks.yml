@@ -20,7 +20,7 @@
     RBENV_VERSION: "{{ item }}"
   with_items: rbenv.versions
 
-- name: dotfiles
+- name: Setup symlinks for dotfiles
   file: src=/Users/{{ user.name }}/Dropbox/lib/dotfiles/{{ item }} dest=/Users/{{ user.name }}/{{ item }} state=link
   with_items:
     - .bash_profile
@@ -28,6 +28,10 @@
     - .emacs.d
     - .gitconfig
     - .gitignore
+    - .mackup.cfg
     - .tmux.conf
     - .zsh-history
     - .zshrc
+
+- name: Setup a symlink for atom conf
+  file: src=/Users/{{ user.name }}/Dropbox/lib/atom dest=/Users/{{ user.name }}/.atom state=link

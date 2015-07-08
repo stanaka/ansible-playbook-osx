@@ -51,6 +51,7 @@
 - homebrew: name=mongodb
 - homebrew: name=nkf
 - homebrew: name=node
+- homebrew: name=openssl state=linked install_options=force
 - homebrew: name=peco
 - homebrew: name=python
 - homebrew: name=rbenv
@@ -68,6 +69,14 @@
 # - homebrew: name=dsocks state=present
 # - homebrew: name=imagemagick
 
+
+# Mackup
+- homebrew: name=mackup
+# Must do followings by hands
+# - name: Restore app settings with Mackup
+#   command: mackup restore
+
+
 # Followings are installed via App Store
 #  find /Applications -path '*Contents/_MASReceipt/receipt' -maxdepth 4 -print |\sed 's#.app/Contents/_MASReceipt/receipt#.app#g; s#/Applications/##'
 
@@ -82,3 +91,4 @@
 # The Unarchiver.app
 # Twitter.app
 # Xcode.app
+
