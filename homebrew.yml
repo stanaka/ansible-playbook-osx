@@ -8,7 +8,7 @@
 - name: Install brew-cask
   homebrew: name=brew-cask
 - homebrew_cask: name=adobe-creative-cloud
-- homebrew_cask: name=alfred
+# - homebrew_cask: name=alfred
 - homebrew_cask: name=appcleaner
 - homebrew_cask: name=atom
 - homebrew_cask: name=bettertouchtool
@@ -20,8 +20,9 @@
 - homebrew_cask: name=google-chrome
 - homebrew_cask: name=google-drive
 - homebrew_cask: name=intellij-idea-ce
-- homebrew_cask: name=istat-menus
+# - homebrew_cask: name=istat-menus
 - homebrew_cask: name=iterm2
+- homebrew_cask: name=java
 - homebrew_cask: name=omnidisksweeper
 - homebrew_cask: name=omnigraffle
 - homebrew_cask: name=skitch
@@ -56,6 +57,7 @@
 - homebrew: name=python
 - homebrew: name=rbenv
 - homebrew: name=ruby-build
+- homebrew: name=sbt
 - homebrew: name=sqlite
 - homebrew: name=the_silver_searcher
 - homebrew: name=tig
@@ -64,11 +66,9 @@
 - homebrew: name=zsh
 - homebrew: name=zsh-completions
 # - homebrew: name=encfs
-# - homebrew: name=rsync
 # - homebrew: name=sshfs
 # - homebrew: name=dsocks state=present
 # - homebrew: name=imagemagick
-
 
 # Mackup
 - homebrew: name=mackup
@@ -76,6 +76,9 @@
 # - name: Restore app settings with Mackup
 #   command: mackup restore
 
+- name: tap homebrew/dupes
+  homebrew_tap: tap=homebrew/dupes
+- homebrew: name=rsync
 
 # Followings are installed via App Store
 #  find /Applications -path '*Contents/_MASReceipt/receipt' -maxdepth 4 -print |\sed 's#.app/Contents/_MASReceipt/receipt#.app#g; s#/Applications/##'
