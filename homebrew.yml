@@ -42,13 +42,16 @@
 - homebrew: name=ack
 - homebrew: name=boost
 - homebrew: name=emacs install_options=with-cocoa
+- homebrew: name=gcal
 - homebrew: name=ghq
 - homebrew: name=git
 - homebrew: name=go
 - homebrew: name=heroku-toolbelt
 - homebrew: name=hub
+- homebrew: name=jq
 - homebrew: name=keychain
 - homebrew: name=lv
+- homebrew: name=mercurial
 - homebrew: name=mongodb
 - homebrew: name=nkf
 - homebrew: name=node
@@ -94,4 +97,3 @@
 # The Unarchiver.app
 # Twitter.app
 # Xcode.app
-
