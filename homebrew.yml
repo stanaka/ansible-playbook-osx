@@ -41,6 +41,7 @@
 
 - homebrew: name=ack
 - homebrew: name=boost
+- homebrew: name=calc
 - homebrew: name=dsocks
 - homebrew: name=emacs install_options=with-cocoa
 - homebrew: name=gcal
