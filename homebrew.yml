@@ -23,6 +23,7 @@
 # - homebrew_cask: name=istat-menus
 - homebrew_cask: name=iterm2
 - homebrew_cask: name=java
+- homebrew_cask: name=mplayer-osx-extended
 - homebrew_cask: name=omnidisksweeper
 - homebrew_cask: name=omnigraffle
 - homebrew_cask: name=skitch
@@ -85,6 +86,9 @@
 - name: tap homebrew/dupes
   homebrew_tap: tap=homebrew/dupes
 - homebrew: name=rsync
+- homebrew: name=libxml2
+- homebrew: name=libxslt
+- homebrew: name=libiconv
 
 # Followings are installed via App Store
 #  find /Applications -path '*Contents/_MASReceipt/receipt' -maxdepth 4 -print |\sed 's#.app/Contents/_MASReceipt/receipt#.app#g; s#/Applications/##'
