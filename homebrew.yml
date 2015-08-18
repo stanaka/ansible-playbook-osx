@@ -61,6 +61,7 @@
 - homebrew: name=node
 - homebrew: name=openssl state=linked install_options=force
 - homebrew: name=peco
+- homebrew: name=perl-build
 - homebrew: name=plenv
 - homebrew: name=python
 - homebrew: name=rbenv
