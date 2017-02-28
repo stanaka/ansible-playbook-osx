@@ -6,7 +6,7 @@
     user:
       name: stanaka
     rbenv:
-      versions: 2.2.2
+      versions: 2.4.0
   vars_files:
     - vars.yml
   handlers:

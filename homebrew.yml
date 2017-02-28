@@ -3,21 +3,21 @@
     update_homebrew: yes
   when: update_homebrew | default(False)
 
-- name: Tap Homebrew Cask
-  homebrew_tap: tap=caskroom/cask
-- name: Install brew-cask
-  homebrew: name=brew-cask
+#- name: Tap Homebrew Cask
+#  homebrew_tap: tap=caskroom/cask
+#- name: Install brew-cask
+#  homebrew: name=brew-cask
 - homebrew_cask: name=adobe-creative-cloud
 # - homebrew_cask: name=alfred
 - homebrew_cask: name=appcleaner
 - homebrew_cask: name=atom
 - homebrew_cask: name=bettertouchtool
-- homebrew_cask: name=boot2docker
+#- homebrew_cask: name=boot2docker
 - homebrew_cask: name=dash
-- homebrew_cask: name=dropbox
-- homebrew_cask: name=dwihn0r-keepassx
+#- homebrew_cask: name=dropbox
+#- homebrew_cask: name=dwihn0r-keepassx
 - homebrew_cask: name=firefox
-- homebrew_cask: name=google-chrome
+# - homebrew_cask: name=google-chrome
 - homebrew_cask: name=google-drive
 - homebrew_cask: name=intellij-idea-ce
 # - homebrew_cask: name=istat-menus
@@ -25,14 +25,14 @@
 - homebrew_cask: name=java
 - homebrew_cask: name=mplayer-osx-extended
 - homebrew_cask: name=omnidisksweeper
-- homebrew_cask: name=omnigraffle
-- homebrew_cask: name=skitch
+#- homebrew_cask: name=omnigraffle
+#- homebrew_cask: name=skitch
 - homebrew_cask: name=skype
-- homebrew_cask: name=slack
+#- homebrew_cask: name=slack
 - homebrew_cask: name=steam
-- homebrew_cask: name=the-unarchiver
+#- homebrew_cask: name=the-unarchiver
 - homebrew_cask: name=vlc
-- homebrew_cask: name=zoomus
+#- homebrew_cask: name=zoomus
 - command: brew cask cleanup
 # - homebrew_cask: name=hoster
 
@@ -80,7 +80,7 @@
 # - homebrew: name=imagemagick
 
 # Mackup
-- homebrew: name=mackup
+#- homebrew: name=mackup
 # Must do followings by hands
 # - name: Restore app settings with Mackup
 #   command: mackup restore
