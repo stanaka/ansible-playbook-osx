@@ -1,10 +1,84 @@
-- osx_defaults: domain={{ item.domain }} key={{ item.key }} type={{ item.type }} value={{ item.value }} state={{ item.state }}
+- name: AppleShowAllFiles
+  osx_defaults:
+    domain: com.apple.finder
+    key: AppleShowAllFiles
+    type: boolean
+    value: false
+    state: present
   notify: killall Finder
-  with_items: osx_defaults_finder_values
 
-- osx_defaults: domain={{ item.domain }} key={{ item.key }} type={{ item.type }} value={{ item.value }} state={{ item.state }}
-  notify: killall SystemUIServer
-  with_items: osx_defaults_system_ui_server_values
+- name: _FXShowPosixPathInTitle
+  osx_defaults:
+    domain: com.apple.finder
+    key: _FXShowPosixPathInTitle
+    type: string
+    value: true
+    state: present
 
-- osx_defaults: domain={{ item.domain }} key={{ item.key }} type={{ item.type }} value={{ item.value }} state={{ item.state }}
-  with_items: osx_defaults_other_values
+# ネットワーク接続時の.DS_Store作成を抑制
+# defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+- name: DSDontWriteNetworkStores
+  osx_defaults:
+    domain: com.apple.desktopservices
+    key: DSDontWriteNetworkStores
+    type: string
+    value: true
+    state: present
+# Dock - MissonControlのアニメーションスピードを速く
+# defaults write com.apple.dock expose-animation-duration -float 0.15
+#  - { domain: com.apple.dock, key: expose-animation-duration, type: float, value: 0.15, state: present }
+
+# Dock - スペース表示高速化
+# defaults write com.apple.dock workspaces-swoosh-animation-off -bool yes
+- name: workspaces-swoosh-animation-off
+  osx_defaults:
+    domain: com.apple.dock
+    key: workspaces-swoosh-animation-off
+    type: boolean
+    value: true
+    state: present
+## アプリ隠しをDock上で半透明で表現
+# defaults write com.apple.Dock showhidden -bool yes
+- name: showhidden
+  osx_defaults:
+    domain: com.apple.dock
+    key: showhidden
+    type: boolean
+    value: true
+    state: present
+
+# ダッシュボードを無効化
+# defaults write com.apple.dashboard mcx-disabled -bool yes
+- name: mcx-disabled
+  osx_defaults:
+    domain: com.apple.dashboard
+    key: mcx-disabled
+    type: boolean
+    value: true
+    state: present
+# マウスの速度を変える
+# defaults write .GlobalPreferences com.apple.trackpad.scaling 5
+#- name: com.apple.trackpad.scaling
+#  osx_defaults:
+#    domain: .GlobalPreferences
+#    key: com.apple.trackpad.scaling
+#    type: int
+#    value: true
+#    state: present
+# 保存ダイアログを常に展開状態にする
+# defaults write -g NSNavPanelExpandedStateForSaveMode -bool yes
+- name: NSNavPanelExpandedStateForSaveMode
+  osx_defaults:
+    domain: .GlobalPreferences
+    key: NSNavPanelExpandedStateForSaveMode
+    type: boolean
+    value: true
+    state: present
+
+- name: com.apple.screencapture
+  osx_defaults:
+    domain: com.apple.screencapture
+    key: disable-shadow
+    type: boolean
+    value: true
+    state: present

@@ -12,8 +12,10 @@
 - homebrew_cask: name=appcleaner
 - homebrew_cask: name=atom
 - homebrew_cask: name=bettertouchtool
+- homebrew_cask: name=bitbar
 #- homebrew_cask: name=boot2docker
 - homebrew_cask: name=dash
+- homebrew_cask: name=docker
 #- homebrew_cask: name=dropbox
 #- homebrew_cask: name=dwihn0r-keepassx
 - homebrew_cask: name=firefox
@@ -23,6 +25,7 @@
 # - homebrew_cask: name=istat-menus
 - homebrew_cask: name=iterm2
 - homebrew_cask: name=java
+- homebrew_cask: name=keepassxc
 - homebrew_cask: name=mplayer-osx-extended
 - homebrew_cask: name=omnidisksweeper
 #- homebrew_cask: name=omnigraffle
@@ -64,6 +67,7 @@
 - homebrew: name=perl-build
 - homebrew: name=plenv
 - homebrew: name=python
+- homebrew: name=qt55
 - homebrew: name=rbenv
 - homebrew: name=ruby-build
 - homebrew: name=sbt
