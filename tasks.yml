@@ -1,5 +1,5 @@
-- include: osx_defaults.yml
-- include: homebrew.yml
+#- include: osx_defaults.yml
+#- include: homebrew.yml
 
 # - name: Add SSH key
 #   authorized_key:
@@ -7,24 +7,19 @@
 #     user: "{{ user.name }}"
 
 # Ruby setup
-#- name: Install Ruby
-#  command: rbenv install --skip-existing --keep {{ item }}
-#  args:
-#    creates: "/Users/{{ user.name }}/.rbenv/versions/{{ item }}"
-#  with_items: rbenv.versions
 - name: Install Ruby
-  command: rbenv install --skip-existing --keep 2.4.0
+  command: rbenv install --skip-existing --keep {{ item }}
   args:
-    creates: "/Users/{{ user.name }}/.rbenv/versions/2.4.0"
+    creates: "/Users/{{ user.name }}/.rbenv/versions/{{ item }}"
+  with_items: "{{ rbenv.versions }}"
 - name: Install Bundler
   gem:
     name: bundler
     state: latest
     executable: "rbenv exec gem"
   environment:
-    RBENV_VERSION: "2.4.0"
-#    RBENV_VERSION: "{{ item }}"
-#  with_items: rbenv.versions
+    RBENV_VERSION: "{{ item }}"
+  with_items: "{{ rbenv.versions }}"
 
 - name: Setup symlinks for dotfiles
   file: src=/Users/{{ user.name }}/Dropbox/lib/dotfiles/{{ item }} dest=/Users/{{ user.name }}/{{ item }} state=link
