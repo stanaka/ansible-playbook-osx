@@ -1,5 +1,6 @@
-#- include: osx_defaults.yml
-#- include: homebrew.yml
+- include: osx_defaults.yml
+- include: homebrew.yml
+- include: nativefier.yml
 
 # - name: Add SSH key
 #   authorized_key:

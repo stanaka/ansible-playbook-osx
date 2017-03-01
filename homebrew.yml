@@ -26,6 +26,7 @@
 - homebrew_cask: name=iterm2
 - homebrew_cask: name=java
 - homebrew_cask: name=keepassxc
+- homebrew_cask: name=messenger
 - homebrew_cask: name=mplayer-osx-extended
 - homebrew_cask: name=omnidisksweeper
 #- homebrew_cask: name=omnigraffle
