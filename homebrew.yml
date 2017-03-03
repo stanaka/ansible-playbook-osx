@@ -21,7 +21,7 @@
 - homebrew_cask: name=firefox
 # - homebrew_cask: name=google-chrome
 - homebrew_cask: name=google-drive
-- homebrew_cask: name=intellij-idea-ce
+# - homebrew_cask: name=intellij-idea
 # - homebrew_cask: name=istat-menus
 - homebrew_cask: name=iterm2
 - homebrew_cask: name=java
@@ -30,6 +30,7 @@
 - homebrew_cask: name=mplayer-osx-extended
 - homebrew_cask: name=omnidisksweeper
 #- homebrew_cask: name=omnigraffle
+- homebrew_cask: name=sequel-pro
 #- homebrew_cask: name=skitch
 - homebrew_cask: name=skype
 #- homebrew_cask: name=slack
@@ -45,6 +46,7 @@
 # - homebrew_cask: name=aquaskk
 
 - homebrew: name=ack
+- homebrew: name=awscli
 - homebrew: name=boost
 - homebrew: name=calc
 - homebrew: name=dsocks
