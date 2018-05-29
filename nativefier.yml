@@ -1,0 +1,6 @@
+- name: Install "nativefier"
+  npm:
+    name: nativefier
+    global: yes
+
+# nativefier --name 'Facebook Messenger' --icon messengers.icns 'https://messenger.com'
