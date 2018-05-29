@@ -18,12 +18,13 @@
 - homebrew_cask: name=docker
 #- homebrew_cask: name=dropbox
 #- homebrew_cask: name=dwihn0r-keepassx
+- homebrew_cask: name=ebmac
 - homebrew_cask: name=firefox
 # - homebrew_cask: name=google-chrome
 - homebrew_cask: name=google-drive
-# - homebrew_cask: name=intellij-idea
+- homebrew_cask: name=intellij-idea
 # - homebrew_cask: name=istat-menus
-- homebrew_cask: name=iterm2
+#- homebrew_cask: name=iterm2
 - homebrew_cask: name=java
 - homebrew_cask: name=keepassxc
 - homebrew_cask: name=messenger
@@ -34,6 +35,7 @@
 #- homebrew_cask: name=skitch
 - homebrew_cask: name=skype
 #- homebrew_cask: name=slack
+- homebrew_cask: name=sourcetree
 - homebrew_cask: name=steam
 #- homebrew_cask: name=the-unarchiver
 - homebrew_cask: name=vlc
@@ -92,12 +94,12 @@
 # - name: Restore app settings with Mackup
 #   command: mackup restore
 
-- name: tap homebrew/dupes
-  homebrew_tap: tap=homebrew/dupes
-- homebrew: name=rsync
-- homebrew: name=libxml2
-- homebrew: name=libxslt
-- homebrew: name=libiconv
+#- name: tap homebrew/dupes
+#  homebrew_tap: tap=homebrew/dupes
+#- homebrew: name=rsync
+#- homebrew: name=libxml2
+#- homebrew: name=libxslt
+#- homebrew: name=libiconv
 
 # Followings are installed via App Store
 #  find /Applications -path '*Contents/_MASReceipt/receipt' -maxdepth 4 -print |\sed 's#.app/Contents/_MASReceipt/receipt#.app#g; s#/Applications/##'
