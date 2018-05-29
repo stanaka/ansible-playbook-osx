@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -ev
 
 SRC_DIRECTORY="$HOME/src/github.com/stanaka"
 ANSIBLE_DIRECTORY="$SRC_DIRECTORY/ansible-playbook-osx"
