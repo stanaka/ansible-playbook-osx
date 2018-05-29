@@ -8,6 +8,7 @@
 #- name: Install brew-cask
 #  homebrew: name=brew-cask
 - homebrew_cask: name=adobe-creative-cloud
+- homebrew_cask: name=aerial
 # - homebrew_cask: name=alfred
 - homebrew_cask: name=appcleaner
 - homebrew_cask: name=atom
