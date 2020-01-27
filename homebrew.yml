@@ -19,7 +19,7 @@
     - name: aquaskk
 #    - name: atom
 #    - name: bettertouchtool
-#    - name: bitbar
+    - name: bitbar
 #    - name: boot2docker
     - name: dash
     - name: docker
