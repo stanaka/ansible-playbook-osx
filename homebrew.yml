@@ -67,6 +67,7 @@
 #    - name:  boost
     - name:  calc
 #    - name:  dsocks
+    - name:  dep
     - name:  dpkg
 #     - name:  emacs install_options=with-cocoa
     - name:  gcal
@@ -96,6 +97,7 @@
     - name:  tig
     - name:  tmux
     - name:  wget
+    - name:  yarn
     - name:  zsh
     - name:  zsh-completions
 #     - name:  encfs
