@@ -3,122 +3,86 @@
     update_homebrew: yes
   when: update_homebrew | default(False)
 
-#- name: Tap Homebrew Cask
-#  homebrew_tap: tap=caskroom/cask
-#- name: Install brew-cask
-#  homebrew: name=brew-cask
-
 - name: homebrew cask packages install
   homebrew_cask:
     name: '{{ item.name }}'
   with_items:
 #    - name: adobe-creative-cloud
     - name: aerial
-#     - name: alfred
     - name: appcleaner
     - name: aquaskk
-#    - name: atom
-#    - name: bettertouchtool
-    - name: bitbar
-#    - name: boot2docker
+    - name: aws-vpn-client
     - name: dash
     - name: docker
-#    - name: dropbox
-#    - name: dwihn0r-keepassx
+    - name: dropbox
     - name: ebmac
     - name: emacs
+    - name: eul
     - name: firefox
 #     - name: google-chrome
 #     - name: google-drive
     - name: intellij-idea
-#     - name: istat-menus
     - name: iterm2
-#    - name: java
     - name: keepassxc
-    - name: messenger
+#    - name: messenger
     - name: mplayer-osx-extended
     - name: omnidisksweeper
 #    - name: omnigraffle
     - name: onedrive
+    - name: rectangle
 #    - name: sequel-pro
 #    - name: skitch
 #    - name: skype
-#    - name: slack
     - name: sourcetree
 #    - name: the-unarchiver
     - name: visual-studio-code
     - name: vlc
-#    - name: zoomus
-#- command: brew cask cleanup
-#     - name: hoster
-    - name: battle-net
-    - name: steam
-
-# - name: Tap Homebrew Aereal Cask
-#   homebrew_tap: tap=aereal/homebrew-aereal_casks
-# - homebrew_cask: name=aquaskk
+    - name: xbar
+    - name: zoom
+#    - name: hoster
+#    - name: battle-net
+#    - name: steam
 
 - name: homebrew packages install
   homebrew:
     name: '{{ item.name }}'
   with_items:
     - name: ack
+    - name: anyenv
     - name: awscli
-#    - name:  boost
-    - name:  calc
-#    - name:  dsocks
-    - name:  dep
-    - name:  dpkg
-#     - name:  emacs install_options=with-cocoa
-    - name:  gcal
-    - name:  ghq
-    - name:  git
-    - name:  go
-#    - name:  heroku-toolbelt
-    - name:  hub
-    - name:  jq
-    - name:  keychain
-    - name:  lv
-#    - name:  mercurial
-#    - name:  mongodb
-    - name:  nkf
-    - name:  node
-#    - name:  openssl state=linked install_options=force
-    - name:  peco
-#    - name:  perl-build
-#    - name:  plenv
-    - name:  python
-#    - name:  qt55
-#    - name:  rbenv
-#    - name:  ruby-build
-#    - name:  sbt
+#    - name: boost
+#    - name: calc
+#    - name: dsocks
+    - name: gcal
+    - name: ghq
+    - name: git
+    - name: go
+#    - name: heroku-toolbelt
+    - name: hub
+    - name: imagemagick
+    - name: jq
+#    - name: keychain
+    - name: kubernetes-cli
+    - name: lv
+#    - name: mercurial
+#    - name: mongodb
+    - name: nkf
+    - name: node
+    - name: oci-cli
+#    - name: openssl state=linked install_options=force
+    - name: peco
+    - name: python
+#    - name: qt55
+#    - name: sbt
     - name:  sqlite
-    - name:  the_silver_searcher
-    - name:  tig
-    - name:  tmux
-    - name:  wget
-    - name:  yarn
-    - name:  zsh
-    - name:  zsh-completions
-#     - name:  encfs
-#     - name:  sshfs
-#     - name:  dsocks state=present
-#     - name:  imagemagick
-
-
-
-# Mackup
-#- homebrew: name=mackup
-# Must do followings by hands
-# - name: Restore app settings with Mackup
-#   command: mackup restore
-
-#- name: tap homebrew/dupes
-#  homebrew_tap: tap=homebrew/dupes
-#- homebrew: name=rsync
-#- homebrew: name=libxml2
-#- homebrew: name=libxslt
-#- homebrew: name=libiconv
+    - name: terraform
+    - name: the_silver_searcher
+    - name: tig
+    - name: tmux
+    - name: wget
+    - name: yarn
+    - name: zsh
+    - name: zsh-completions
 
 # Followings are installed via App Store
 #  find /Applications -path '*Contents/_MASReceipt/receipt' -maxdepth 4 -print |\sed 's#.app/Contents/_MASReceipt/receipt#.app#g; s#/Applications/##'

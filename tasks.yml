@@ -1,5 +1,5 @@
-- include: osx_defaults.yml
-- include: homebrew.yml
+#- include: osx_defaults.yml
+- include_tasks: homebrew.yml
 #- include: nativefier.yml
 
 # - name: Add SSH key
@@ -22,16 +22,16 @@
 #    RBENV_VERSION: "{{ item }}"
 #  with_items: "{{ rbenv.versions }}"
 
-- name: Setup symlinks for dotfiles
-  file: src=/Users/{{ user.name }}/OneDrive/lib/dotfiles/{{ item }} dest=/Users/{{ user.name }}/{{ item }} state=link
-  with_items:
-    - .bash_profile
-    - .bashrc
-    - .emacs.d
-    - .gitconfig
-    - .gitignore
-    - .mackup.cfg
-    - .tmux.conf
+#- name: Setup symlinks for dotfiles
+#  file: src=/Users/{{ user.name }}/OneDrive/lib/dotfiles/{{ item }} dest=/Users/{{ user.name }}/{{ item }} state=link
+#  with_items:
+#    - .bash_profile
+#    - .bashrc
+#    - .emacs.d
+#    - .gitconfig
+#    - .gitignore
+#    - .mackup.cfg
+#    - .tmux.conf
 
 #- name: Setup a symlink for vim conf
 #  file: src=/Users/{{ user.name }}/Dropbox/lib/vim dest=/Users/{{ user.name }}/.vim state=link
@@ -39,5 +39,5 @@
 #- name: Setup a symlink for atom conf
 #  file: src=/Users/{{ user.name }}/Dropbox/lib/atom dest=/Users/{{ user.name }}/.atom state=link
 
-- name: Setup a symlink for zsh conf
-  file: src=/Users/{{ user.name }}/OneDrive/lib/zsh/.zshrc dest=/Users/{{ user.name }}/.zshrc state=link
+#- name: Setup a symlink for zsh conf
+#  file: src=/Users/{{ user.name }}/OneDrive/lib/zsh/.zshrc dest=/Users/{{ user.name }}/.zshrc state=link
