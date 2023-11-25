@@ -9,22 +9,24 @@
   with_items:
 #    - name: adobe-creative-cloud
     - name: aerial
+    - name: alacritty
     - name: appcleaner
     - name: aquaskk
-    - name: aws-vpn-client
-    - name: dash
+#    - name: aws-vpn-client
+#    - name: dash
     - name: docker
     - name: dropbox
     - name: ebmac
     - name: emacs
-    - name: eul
+#    - name: eul
     - name: firefox
-#     - name: google-chrome
+    - name: google-chrome
 #     - name: google-drive
     - name: intellij-idea
-    - name: iterm2
+#    - name: iterm2
     - name: keepassxc
 #    - name: messenger
+    - name: monitorcontrol
     - name: mplayer-osx-extended
     - name: omnidisksweeper
 #    - name: omnigraffle
@@ -33,11 +35,12 @@
 #    - name: sequel-pro
 #    - name: skitch
 #    - name: skype
-    - name: sourcetree
+    - name: smplayer
+#    - name: sourcetree
 #    - name: the-unarchiver
     - name: visual-studio-code
-    - name: vlc
-    - name: xbar
+#    - name: vlc
+#    - name: xbar
     - name: zoom
 #    - name: hoster
 #    - name: battle-net
@@ -68,13 +71,13 @@
 #    - name: mongodb
     - name: nkf
     - name: node
-    - name: oci-cli
+#    - name: oci-cli
 #    - name: openssl state=linked install_options=force
     - name: peco
     - name: python
 #    - name: qt55
 #    - name: sbt
-    - name:  sqlite
+    - name: sqlite
     - name: terraform
     - name: the_silver_searcher
     - name: tig
