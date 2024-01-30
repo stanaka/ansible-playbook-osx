@@ -8,6 +8,6 @@
   vars_files:
     - vars.yml
   handlers:
-    - include: handler.yml
+    - include_tasks: handler.yml
   tasks:
-    - include: tasks.yml
+    - include_tasks: tasks.yml

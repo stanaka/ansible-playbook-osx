@@ -17,12 +17,12 @@
     - name: docker
     - name: dropbox
     - name: ebmac
-    - name: emacs
+#    - name: emacs
 #    - name: eul
     - name: firefox
-    - name: google-chrome
+#    - name: google-chrome
 #     - name: google-drive
-    - name: intellij-idea
+#    - name: intellij-idea
 #    - name: iterm2
     - name: keepassxc
 #    - name: messenger
@@ -41,7 +41,7 @@
     - name: visual-studio-code
 #    - name: vlc
 #    - name: xbar
-    - name: zoom
+#    - name: zoom
 #    - name: hoster
 #    - name: battle-net
 #    - name: steam
