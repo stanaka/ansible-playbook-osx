@@ -19,7 +19,7 @@
     - name: ebmac
 #    - name: emacs
 #    - name: eul
-    - name: firefox
+#    - name: firefox
 #    - name: google-chrome
 #     - name: google-drive
 #    - name: intellij-idea
@@ -28,6 +28,7 @@
 #    - name: messenger
     - name: monitorcontrol
     - name: mplayer-osx-extended
+    - name: obsidian
     - name: omnidisksweeper
 #    - name: omnigraffle
     - name: onedrive
@@ -60,6 +61,7 @@
     - name: ghq
     - name: git
     - name: go
+    - name: gnupg
 #    - name: heroku-toolbelt
     - name: hub
     - name: imagemagick

@@ -3,16 +3,16 @@
 BASEDIR=$HOME/OneDrive/lib/dotfiles
 ZSH_BASEDIR=$HOME/OneDrive/lib/zsh
 
-for i in .bash_profile .bashrc .emacs.d .gitconfig .gitignore .tmux.conf;
+for i in .alacritty.toml .bash_profile .bashrc .bc .emacs.d .gitconfig .gitignore .tmux.conf;
 do
-    if [ ! -e $BASEDIR/$i ]; then
+    if [ ! -e $HOME/$i ]; then
         ln -s $BASEDIR/$i $HOME
     fi
 done
 
-for i in .zshrc .zsh-history;
+for i in .zshrc
 do
-    if [ ! -e $ZSH_BASEDIR/$i ]; then
+    if [ ! -e $HOME/$i ]; then
         ln -s $ZSH_BASEDIR/$i $HOME
     fi
 done
